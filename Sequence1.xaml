@@ -130,32 +130,20 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence1" sap:VirtualizedContainerService.HintSize="1525,1803" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence1" sap:VirtualizedContainerService.HintSize="1141.6000000000001,1802.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="snm:MailMessage" Name="mail_message" />
       <Variable x:TypeArguments="ss:SecureString" Name="pass" />
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dict">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="New Dictionary ( Of String, Object)" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="scg:List(x:String)" Name="List1">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New List ( Of String)" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="names">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Ram,John,Shyama</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Default="[New Dictionary ( Of String, Object)]" Name="dict" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[New List ( Of String)]" Name="List1" />
+      <Variable x:TypeArguments="x:String" Default="Ram,John,Shyama" Name="names" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap:VirtualizedContainerService.HintSize="452,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(x:String)">[List1]</OutArgument>
       </Assign.To>
@@ -163,14 +151,14 @@
         <InArgument x:TypeArguments="scg:List(x:String)">[names.Split(",").ToList]</InArgument>
       </Assign.Value>
     </Assign>
-    <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[List1]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="452,173" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1">
+    <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[List1]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="452,173.6" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1">
       <uasc:AppendItemToCollection.Items>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">Ram</InArgument>
         </scg:List>
       </uasc:AppendItemToCollection.Items>
     </uasc:AppendItemToCollection>
-    <Assign sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign DisplayName="Assign value" sap:VirtualizedContainerService.HintSize="452,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Object">[dict("emp1")]</OutArgument>
       </Assign.To>
@@ -178,7 +166,7 @@
         <InArgument x:TypeArguments="x:Object">["dfd"]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="452,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="ss:SecureString">[pass]</OutArgument>
       </Assign.To>
